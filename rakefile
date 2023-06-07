@@ -1,0 +1,10 @@
+require 'faker'
+
+desc '隨機產生三個人的資料'
+namespace :profile do
+  task :generate do
+    3.times do
+      puts "#{Faker::Name.name} <#{Faker::Internet.email}>"
+    end
+  end
+end
